@@ -5,6 +5,7 @@ set :use_sudo, false
 set :default_run_options, :pty => true
 #server "example.com", :web, :app, :db, :primary => true
 #set :deploy_to, "/path/to/#{application}"
+#set :php_path, "/path/to/php"
 
 set :scm, :git
 set :repository, "git://github.com/sanemat/bllik.git"
