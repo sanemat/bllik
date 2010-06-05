@@ -7,7 +7,7 @@ class Game
     $this->pitcher = $pitcher;
     $this->batter = $batter;
   }
-  public function judgment()
+  public function judgement()
   {
     if($this->pitcher->getAction() === 'strike' && $this->batter->getAction() === 'watch'){
       $this->pitcher->result('minogashi');
@@ -29,5 +29,9 @@ class Game
   public function isFinished()
   {
     return true;
+  }
+  public function getPitcher()
+  {
+    return $this->pitcher;
   }
 }

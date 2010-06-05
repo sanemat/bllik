@@ -30,10 +30,21 @@ class matchActions extends sfActions
   {
     $this->forward404Unless($request->isMethod('post'));
    
+    $zoneList = array('strike', 'ball');
+    $pitching = $request->getParameter('pitching');
+    $zone = $zoneList[$pitching['zone']];
+    $pitcher = new Pitcher();
+    $pitcher->action($zone);
+    $batter = new Batter();
+    $batter->action('swing');
+    $game = new Game();
+    $game->setPlayer($pitcher, $batter);
+    $game->judgement();
+    $pitcher = $game->getPitcher();
     $params = array(
-      'zone'    => $request->getParameter('zone'),
+      'result' => $pitcher->getResult(),
     );
-   
+ 
     $this->redirect('match/result?'.http_build_query($params));
   }
 

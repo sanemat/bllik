@@ -1,7 +1,7 @@
 <?php
 class Pitcher
 {
-  private $action, $isWin, $fluctuateYen;
+  private $action, $isWin, $fluctuateYen, $result;
   public function action($action)
   {
     $this->action = $action;
@@ -19,6 +19,7 @@ class Pitcher
     return $this->fluctuateYen;
   }
   public function result($result){
+    $this->result = $result;
     if($result === 'minogashi'){
       $this->isWin = true;
       $this->fluctuateYen = 2;
@@ -35,5 +36,9 @@ class Pitcher
       $this->isWin = true;
       $this->fluctuateYen = 2;
     }
+  }
+  public function getResult()
+  {
+    return $this->result;
   }
 }
