@@ -17,6 +17,10 @@ class Game
       $this->pitcher->result('sayonarahit');
       $this->batter->result('sayonarahit');
     }
+    elseif($this->pitcher->getAction() === 'ball' && $this->batter->getAction() === 'watch'){
+      $this->pitcher->result('oshidashi');
+      $this->batter->result('oshidashi');
+    }
   }
   public function isFinished()
   {

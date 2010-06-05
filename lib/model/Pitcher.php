@@ -27,5 +27,9 @@ class Pitcher
       $this->isWin = false;
       $this->fluctuateYen = -1;
     }
+    elseif($result === 'oshidashi'){
+      $this->isWin = false;
+      $this->fluctuateYen = -2;
+    }
   }
 }
