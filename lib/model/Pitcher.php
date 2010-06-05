@@ -31,5 +31,9 @@ class Pitcher
       $this->isWin = false;
       $this->fluctuateYen = -2;
     }
+    elseif($result === 'karaburi'){
+      $this->isWin = true;
+      $this->fluctuateYen = 2;
+    }
   }
 }

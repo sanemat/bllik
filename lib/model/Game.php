@@ -21,6 +21,10 @@ class Game
       $this->pitcher->result('oshidashi');
       $this->batter->result('oshidashi');
     }
+    elseif($this->pitcher->getAction() === 'ball' && $this->batter->getAction() === 'swing'){
+      $this->pitcher->result('karaburi');
+      $this->batter->result('karaburi');
+    }
   }
   public function isFinished()
   {
