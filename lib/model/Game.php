@@ -9,6 +9,6 @@ class Game
   }
   public function isFinished()
   {
-    return false;
+    return true;
   }
 }
