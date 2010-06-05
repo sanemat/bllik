@@ -1,21 +1,28 @@
 <?php
-
 /**
- * match actions.
+ * matchActions
  *
- * @package    bllik
- * @subpackage match
- * @author     Your name here
- * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ * @uses sfActions
  */
 class matchActions extends sfActions
 {
- /**
-  * Executes index action
-  *
-  * @param sfRequest $request A request object
-  */
+  /**
+   * executeIndex
+   *
+   * @param sfWebRequest $request
+   * @return string
+   */
   public function executeIndex(sfWebRequest $request)
+  {
+  }
+
+  /**
+   * executePitching
+   *
+   * @param sfWebRequest $request
+   * @return string
+   */
+  public function executePitching(sfWebRequest $request)
   {
   }
 }
