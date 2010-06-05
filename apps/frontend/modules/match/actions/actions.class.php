@@ -26,6 +26,13 @@ class matchActions extends sfActions
   {
     $this->form = new PitchingForm();
   }
+
+  /**
+   * executePsubmit
+   *
+   * @param sfWebRequest $request
+   * @return void
+   */
   public function executePsubmit(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod('post'));
@@ -48,6 +55,11 @@ class matchActions extends sfActions
     $this->redirect('match/result?'.http_build_query($params));
   }
 
+  /**
+   * executeResult
+   *
+   * @return string
+   */
   public function executeResult()
   {
   }

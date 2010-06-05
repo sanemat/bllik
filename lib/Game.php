@@ -1,12 +1,30 @@
 <?php
+/**
+ * Game
+ * 
+ */
 class Game
 {
   private $pitcher, $batter;
+
+  /**
+   * setPlayer
+   *
+   * @param Pitcher $pitcher
+   * @param Batter $batter
+   * @return void
+   */
   public function setPlayer(Pitcher $pitcher, Batter $batter)
   {
     $this->pitcher = $pitcher;
     $this->batter = $batter;
   }
+
+  /**
+   * judgement
+   *
+   * @return void
+   */
   public function judgement()
   {
     if($this->pitcher->getAction() === 'strike' && $this->batter->getAction() === 'watch'){
@@ -26,10 +44,22 @@ class Game
       $this->batter->result('karaburi');
     }
   }
+
+  /**
+   * isFinished
+   *
+   * @return bool
+   */
   public function isFinished()
   {
     return true;
   }
+
+  /**
+   * getPitcher
+   *
+   * @return Pitcher
+   */
   public function getPitcher()
   {
     return $this->pitcher;
