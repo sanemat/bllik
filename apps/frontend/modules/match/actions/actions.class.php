@@ -34,9 +34,9 @@ class matchActions extends sfActions
     $pitching = $request->getParameter('pitching');
     $zone = $zoneList[$pitching['zone']];
     $pitcher = new Pitcher();
-    $pitcher->action($zone);
+    $pitcher->setAction($zone);
     $batter = new Batter();
-    $batter->action('swing');
+    $batter->setAction('swing');
     $game = new Game();
     $game->setPlayer($pitcher, $batter);
     $game->judgement();

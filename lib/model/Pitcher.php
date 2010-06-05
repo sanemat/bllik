@@ -2,7 +2,7 @@
 class Pitcher
 {
   private $action, $isWin, $fluctuateYen, $result;
-  public function action($action)
+  public function setAction($action)
   {
     $this->action = $action;
   }

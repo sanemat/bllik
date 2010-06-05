@@ -2,7 +2,11 @@
 class Batter
 {
   private $action;
-  function action($action)
+  public function setAction($action)
+  {
+    $this->action = $action;
+  }
+  public function action($action)
   {
     $this->action = $action;
   }
